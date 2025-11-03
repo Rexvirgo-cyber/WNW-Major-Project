@@ -232,16 +232,11 @@ const App = () => {
         {messages.map((msg, index) => (
           <div key={index} className={`message-bubble ${msg.sender}`}>
             <div dangerouslySetInnerHTML={{ __html: msg.text }}></div>
-             {msg.hasButton && !msg.text.includes("I think Glen has the most apt answer to that.") && (
+            {msg.sender === 'ai' && (msg.hasButton || msg.text.includes("I think Glen has the most apt answer to that.")) && (
               <button className="get-in-touch-btn" onClick={handleGetInTouch}>
                 Get in Touch
               </button>
             )}
-             {msg.text.includes("I think Glen has the most apt answer to that.") && (
-                 <button className="get-in-touch-btn" onClick={handleGetInTouch}>
-                    Get in Touch
-                </button>
-             )}
           </div>
         ))}
         {isLoading && (
