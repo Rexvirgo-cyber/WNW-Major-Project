@@ -66,18 +66,18 @@ const App = () => {
 🚤 FLEET KNOWLEDGE BASE
 
 **YACHTS:**
-- 115' "GIHRAMAR"
+- 115' "Spirit"
 - 112' "Eden"
 - 110' "Julianne"
-- 105' YCM
-- 100' "Tuff Ship"
-- 100' "Appolonia"
+- 105' YCM Sunseeker
+- 100' "Hargrave"
 - 95' "Current Sea"
 - 92' "New Life"
 - 87' "Squalo"
 - 76' "Milamo"
 - 75' "Daddy's Dollar"
 - 72' Mangusta
+- 69' "Appolonia"
 - 65' "Dreamtime"
 
 **SPEEDBOATS:**
@@ -110,13 +110,13 @@ const App = () => {
 | User Emotion / Vibe | Recommended Vessel |
 |----------------------|--------------------|
 | Romantic / Elegant | 76' "Milamo" |
-| Family / Comfort / Togetherness | 65' "Dreamtime" |
+| Family / Comfort / Togetherness | 65' "Dreamtime" or 100' "Hargrave" |
 | Adventure / Speed / Thrill | 87' "Squalo" or 43' Midnight Express |
 | Celebration / Party / Glamour | 75' "Daddy's Dollar" or 72' Mangusta |
 | Sophisticated / Relaxed Luxury | 112' "Eden" |
-| Modern / Social Luxury | 110' "Julianne" or 105' YCM |
-| Ultimate Prestige / Superyacht Experience | 115' "GIHRAMAR" |
-| Classic / Romantic Escape | 100' "Appolonia" |
+| Modern / Social Luxury | 110' "Julianne" or 105' YCM Sunseeker |
+| Ultimate Prestige / Superyacht Experience | 115' "Spirit" |
+| Classic / Romantic Escape | 69' "Appolonia" |
 | Spacious / Contemporary Comfort | 95' "Current Sea" |
 | Peaceful / Private Retreat | 92' "New Life" |`;
   };
