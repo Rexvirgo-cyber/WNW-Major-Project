@@ -35,7 +35,7 @@
         background-image: url('https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=2828&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         background-size: cover;
         background-position: center;
-        filter: brightness(0.7); /* Darken image for text contrast */
+        filter: brightness(0.7);
         z-index: -1;
       }
       #root {
@@ -73,12 +73,12 @@
         font-weight: 500;
         color: var(--light-blue);
       }
-       .chat-header p {
+      .chat-header p {
         margin: 5px 0 0;
         font-size: 0.9rem;
         color: var(--white);
         opacity: 0.8;
-       }
+      }
       .message-list {
         flex-grow: 1;
         padding: 20px;
@@ -87,7 +87,6 @@
         flex-direction: column;
         gap: 15px;
       }
-      /* Custom scrollbar for better aesthetics */
       .message-list::-webkit-scrollbar {
         width: 6px;
       }
@@ -110,7 +109,7 @@
         box-shadow: 0 1px 3px rgba(0,0,0,0.2);
       }
       .message-bubble.user {
-        background: rgba(15, 124, 187, 0.7); /* Semi-transparent blue */
+        background: rgba(15, 124, 187, 0.7);
         color: var(--white);
         align-self: flex-end;
         border-bottom-right-radius: 5px;
@@ -122,9 +121,9 @@
         border-bottom-left-radius: 5px;
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
-       .message-bubble.ai strong {
+      .message-bubble.ai strong {
         color: var(--light-blue);
-       }
+      }
       .input-area {
         display: flex;
         padding: 20px;
@@ -185,7 +184,6 @@
         0%, 80%, 100% { transform: scale(0); }
         40% { transform: scale(1.0); }
       }
-
       .get-in-touch-btn {
         margin-top: 15px;
         padding: 10px 20px;
@@ -196,28 +194,39 @@
         font-size: 0.9rem;
         cursor: pointer;
         transition: background-color 0.2s, color 0.2s;
-        display: block; /* Ensure the button is on its own line */
-        width: fit-content; /* Make button width fit content */
+        display: block;
+        width: fit-content;
       }
       .get-in-touch-btn:hover {
         background-color: var(--light-blue);
         color: var(--white);
       }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
-  }
-}
-</script>
-</head>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/"
+      }
+    }
+    </script>
+  </head>
   <body>
     <div class="background-image"></div>
     <div id="root"></div>
     <script defer src="bundle.js"></script>
+
+    <!-- Netlify SPA Fallback -->
+    <script>
+      if (typeof history.pushState === 'function') {
+        window.addEventListener('error', function (e) {
+          if (e.message && (e.message.includes('Failed to fetch') || e.message.includes('404'))) {
+            window.location.href = '/';
+          }
+        });
+      }
+    </script>
   </body>
 </html>
